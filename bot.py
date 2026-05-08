@@ -7,7 +7,11 @@ from aiogram.types import Message, ChatPermissions
 from aiogram.enums import ChatMemberStatus
 
 import os
+
 TOKEN = os.getenv("TOKEN")
+
+if not TOKEN:
+    raise Exception("TOKEN non impostato!")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
