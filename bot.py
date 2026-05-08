@@ -10,8 +10,10 @@ import os
 
 TOKEN = os.getenv("TOKEN")
 
+print("TOKEN =", TOKEN)
+
 if not TOKEN:
-    raise Exception("TOKEN non impostato!")
+    raise Exception("TOKEN NON TROVATO SU RAILWAY")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
